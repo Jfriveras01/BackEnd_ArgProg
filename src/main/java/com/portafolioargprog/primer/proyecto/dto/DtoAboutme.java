@@ -2,56 +2,40 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.portafolioargprog.primer.proyecto.entity;
+package com.portafolioargprog.primer.proyecto.dto;
+
+import jakarta.validation.constraints.NotBlank;
 
 /**
  *
  * @author Fran
  */
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotNull;
-
-@Entity
-public class Aboutme {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class DtoAboutme {
     
+    @NotBlank
     private String foto;
     
-    @NotNull
+    @NotBlank
     private String nombre;
     
-    @NotNull
+    @NotBlank
     private String titulo;
     
-    @NotNull
+    @NotBlank
     private String ubicacion;
     
-    @NotNull
+    @NotBlank
     private String descripcion;
-    
 
-    public Aboutme() {
+    public DtoAboutme() {
     }
 
-    public Aboutme(String foto, String nombre, String titulo, String ubicacion, String descripcion) {
+    public DtoAboutme(String foto, String nombre, String titulo, String ubicacion, String descripcion) {
         this.foto = foto;
         this.nombre = nombre;
         this.titulo = titulo;
         this.ubicacion = ubicacion;
-        this.descripcion= descripcion;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.descripcion = descripcion;
     }
 
     public String getFoto() {
@@ -93,5 +77,8 @@ public class Aboutme {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+    
+    
+    
     
 }
