@@ -2,49 +2,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.portafolioargprog.primer.proyecto.entity;
+package com.portafolioargprog.primer.proyecto.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 
 /**
  *
  * @author Fran
  */
-@Entity
-public class Red {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @NotNull
+public class DtoRed {
+    @NotBlank
     private String nombre;
-    @NotNull
+    @NotBlank
     private String url;
-    @NotNull
+    @NotBlank
     private String icon;
-    
-    
-   //constructores
-    public Red() {
+
+    public DtoRed() {
     }
 
-    public Red(String nombre, String url, String icon) {
+    public DtoRed(String nombre, String url, String icon) {
         this.nombre = nombre;
         this.url = url;
-        this.icon= icon;
-    }
-    
-    //getter and setter
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.icon = icon;
     }
 
     public String getNombre() {

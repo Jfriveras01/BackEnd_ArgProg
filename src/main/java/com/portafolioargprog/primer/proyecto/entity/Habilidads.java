@@ -15,29 +15,24 @@ import jakarta.validation.constraints.NotNull;
  * @author Fran
  */
 @Entity
-public class Red {
+public class Habilidads {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    
     @NotNull
     private String nombre;
-    @NotNull
-    private String url;
-    @NotNull
-    private String icon;
     
-    
-   //constructores
-    public Red() {
+    @NotNull
+    private int porcentaje;
+
+    public Habilidads() {
     }
 
-    public Red(String nombre, String url, String icon) {
+    public Habilidads(String nombre, int porcentaje) {
         this.nombre = nombre;
-        this.url = url;
-        this.icon= icon;
+        this.porcentaje = porcentaje;
     }
-    
-    //getter and setter
 
     public int getId() {
         return id;
@@ -55,21 +50,15 @@ public class Red {
         this.nombre = nombre;
     }
 
-    public String getUrl() {
-        return url;
+    public int getPorcentaje() {
+        return porcentaje;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setPorcentaje(int porcentaje) {
+        this.porcentaje = porcentaje;
     }
 
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
+    
     
     
 }
