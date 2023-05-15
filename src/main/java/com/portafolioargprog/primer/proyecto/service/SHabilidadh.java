@@ -4,13 +4,13 @@
  */
 package com.portafolioargprog.primer.proyecto.service;
 
-import com.portafolioargprog.primer.proyecto.entity.Habilidad;
-import com.portafolioargprog.primer.proyecto.repository.RHabilidad;
+import com.portafolioargprog.primer.proyecto.entity.Habilidadh;
 import jakarta.transaction.Transactional;
 import java.util.Optional;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.portafolioargprog.primer.proyecto.repository.RHabilidadh;
 
 
 /**
@@ -19,24 +19,24 @@ import org.springframework.stereotype.Service;
  */
 @Transactional
 @Service
-public class SHabilidad {
+public class SHabilidadh {
     @Autowired
-    RHabilidad rhabilidad;
+    RHabilidadh rhabilidad;
     
     
-    public List<Habilidad> list(){
+    public List<Habilidadh> list(){
         return rhabilidad.findAll();
     }
     
-    public Optional<Habilidad> getOne(int id){
+    public Optional<Habilidadh> getOne(int id){
         return rhabilidad.findById(id);
     }
     
-    public Optional<Habilidad> getByNombre(String nombre){
+    public Optional<Habilidadh> getByNombre(String nombre){
         return rhabilidad.findByNombre(nombre);
     }
     
-    public void save(Habilidad skill){
+    public void save(Habilidadh skill){
         rhabilidad.save(skill);
     }
     

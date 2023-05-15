@@ -79,7 +79,7 @@ public class CEducacion {
         educacion.setTitulo(dtoexp.getTitulo());
         educacion.setPeriodo(dtoexp.getPeriodo());
         educacion.setNombre(dtoexp.getNombre());
-        educacion.setDetalle((dtoexp.getDetalle()));
+        educacion.setDetalle(dtoexp.getDetalle());
         
         seducacion.save(educacion);
         return new ResponseEntity(new Mensaje("Educacion actualizada"), HttpStatus.OK);

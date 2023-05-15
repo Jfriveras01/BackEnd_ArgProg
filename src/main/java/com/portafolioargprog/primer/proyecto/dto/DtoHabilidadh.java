@@ -11,7 +11,7 @@ import jakarta.validation.constraints.NotNull;
  *
  * @author Fran
  */
-public class dtoHabilidad {
+public class DtoHabilidadh {
     @NotNull
     @NotBlank
     private String nombre;
@@ -21,10 +21,10 @@ public class dtoHabilidad {
     private int porcentaje;
     
     //Constructores
-    public dtoHabilidad() {
+    public DtoHabilidadh() {
     }
 
-    public dtoHabilidad(String nombre, int porcentaje) {
+    public DtoHabilidadh(String nombre, int porcentaje) {
         this.nombre = nombre;
         this.porcentaje = porcentaje;
     }

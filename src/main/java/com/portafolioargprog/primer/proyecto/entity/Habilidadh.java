@@ -15,7 +15,7 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
 
 @Entity
-public class Habilidad {
+public class Habilidadh {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -26,10 +26,10 @@ public class Habilidad {
     @NotNull
     private int porcentaje;
 
-    public Habilidad() {
+    public Habilidadh() {
     }
 
-    public Habilidad(String nombre, int porcentaje) {
+    public Habilidadh(String nombre, int porcentaje) {
         this.nombre = nombre;
         this.porcentaje = porcentaje;
     }
