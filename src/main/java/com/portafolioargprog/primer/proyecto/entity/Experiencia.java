@@ -25,20 +25,23 @@ public class Experiencia {
     private String img;
     
     @NotNull
-    private String titulo_exp;
+    private String titulo;
     
     @NotNull
-    private String descripcion_exp;
+    private String descripcion;
     
     //Constructores
 
     public Experiencia() {
     }
 
-    public Experiencia(String titulo_exp, String descripcion_exp) {
-        this.titulo_exp = titulo_exp;
-        this.descripcion_exp = descripcion_exp;
+    public Experiencia(String img, String titulo, String descripcion) {
+        this.img = img;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
     }
+
+    
     
     //Getters and setters
 
@@ -58,20 +61,20 @@ public class Experiencia {
         this.img = img;
     }
     
-    public String getTitulo_exp() {
-        return titulo_exp;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void getTitulo_exp(String titulo_exp) {
-        this.titulo_exp = titulo_exp;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public String getDescripcion_exp() {
-        return descripcion_exp;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setDescripcion_exp(String descripcion_exp) {
-        this.descripcion_exp = descripcion_exp;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
     
 }
