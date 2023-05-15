@@ -34,16 +34,19 @@ public class Aboutme {
     @NotNull
     private String descripcion;
     
+    private String banner;
+    
 
     public Aboutme() {
     }
 
-    public Aboutme(String foto, String nombre, String titulo, String ubicacion, String descripcion) {
+    public Aboutme(String foto, String nombre, String titulo, String ubicacion, String descripcion, String banner) {
         this.foto = foto;
         this.nombre = nombre;
         this.titulo = titulo;
         this.ubicacion = ubicacion;
         this.descripcion= descripcion;
+        this.banner = banner;
     }
 
     public int getId() {
@@ -93,5 +96,14 @@ public class Aboutme {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public String getBanner() {
+        return banner;
+    }
+
+    public void setBanner(String banner) {
+        this.banner = banner;
+    }
+    
     
 }

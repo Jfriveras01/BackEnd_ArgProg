@@ -58,7 +58,7 @@ public class CAbouteme {
         if(saboutme.existsByNombre(dtoabout.getNombre()))
             return new ResponseEntity(new Mensaje("Esa educacion ya existe"), HttpStatus.BAD_REQUEST);
         
-        Aboutme aboutme = new Aboutme (dtoabout.getFoto(), dtoabout.getNombre(), dtoabout.getTitulo(), dtoabout.getUbicacion(), dtoabout.getDescripcion());
+        Aboutme aboutme = new Aboutme (dtoabout.getFoto(), dtoabout.getNombre(), dtoabout.getTitulo(), dtoabout.getUbicacion(), dtoabout.getDescripcion(), dtoabout.getBanner());
         saboutme.save(aboutme);
         
         return new ResponseEntity(new Mensaje("Educacion agregada"), HttpStatus.OK);
@@ -82,6 +82,7 @@ public class CAbouteme {
         aboutme.setTitulo(dtoabout.getTitulo());
         aboutme.setUbicacion(dtoabout.getUbicacion());
         aboutme.setDescripcion(dtoabout.getDescripcion());
+        aboutme.setBanner(dtoabout.getBanner());
         
         saboutme.save(aboutme);
         return new ResponseEntity(new Mensaje("Educacion actualizada"), HttpStatus.OK);
