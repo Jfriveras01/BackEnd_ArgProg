@@ -1,5 +1,5 @@
 
-FROM amazoncorretto:17-alpine-jdk // de que imagen partimos
-MAINTAINER FR // quien es el dueño
-COPY        //copia el empaquetado y lo sube
-ENTRYPOINT  //instruccion que se va a ejecutar
+FROM amazoncorretto:17-alpine-jdk                                
+MAINTAINER FRIVERAS                                                
+COPY  target/primer-proyecto-0.0.1-SNAPSHOT.jar fr-app.jar     
+ENTRYPOINT  ["java","-jar","/fr-app.jar"]                     
