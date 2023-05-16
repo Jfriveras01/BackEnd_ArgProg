@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("aboutme")
 @CrossOrigin(origins = "http://localhost:4200")
-public class CAbouteme {
+public class CAboutme {
     
     @Autowired
     SAboutme saboutme;
