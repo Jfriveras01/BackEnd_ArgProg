@@ -1,5 +1,6 @@
 com\portafolioargprog\primer\proyecto\security\repository\IUsuarioRepository.class
 com\portafolioargprog\primer\proyecto\service\SProyecto.class
+com\portafolioargprog\primer\proyecto\PrimerProyectoApplication$1.class
 com\portafolioargprog\primer\proyecto\repository\RHabilidads.class
 com\portafolioargprog\primer\proyecto\security\enums\RolNombre.class
 com\portafolioargprog\primer\proyecto\security\entity\Usuario.class
