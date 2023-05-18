@@ -29,7 +29,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/skillh")
-@CrossOrigin (origins =" https://front-end-argprograma.web.app")
 public class CHabilidadh {
     
     @Autowired

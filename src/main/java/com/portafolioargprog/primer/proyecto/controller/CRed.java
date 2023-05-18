@@ -29,7 +29,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("red")
-@CrossOrigin (origins =" https://front-end-argprograma.web.app/")
 public class CRed {
     @Autowired
     SRed sRed;

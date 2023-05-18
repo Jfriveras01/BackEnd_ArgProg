@@ -29,7 +29,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("aboutme")
-@CrossOrigin (origins =" https://front-end-argprograma.web.app")
 public class CAboutme {
     
     @Autowired
