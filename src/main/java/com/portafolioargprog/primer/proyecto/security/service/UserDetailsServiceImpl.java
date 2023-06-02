@@ -4,8 +4,8 @@
  */
 package com.portafolioargprog.primer.proyecto.security.service;
 
-import com.portafolioargprog.primer.proyecto.security.entity.Usuario;
-import com.portafolioargprog.primer.proyecto.security.entity.UsuarioPrincipal;
+import com.portafolioargprog.primer.proyecto.security.Entity.Usuario;
+import com.portafolioargprog.primer.proyecto.security.Entity.UsuarioPrincipal;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -4,8 +4,8 @@
  */
 package com.portafolioargprog.primer.proyecto.security.repository;
 
-import com.portafolioargprog.primer.proyecto.security.enums.RolNombre;
-import com.portafolioargprog.primer.proyecto.security.entity.Rol;
+import com.portafolioargprog.primer.proyecto.security.Enums.RolNombre;
+import com.portafolioargprog.primer.proyecto.security.Entity.Rol;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

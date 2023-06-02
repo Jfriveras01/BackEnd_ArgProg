@@ -4,7 +4,7 @@
  */
 package com.portafolioargprog.primer.proyecto.security.jwt;
 
-import com.portafolioargprog.primer.proyecto.security.entity.UsuarioPrincipal;
+import com.portafolioargprog.primer.proyecto.security.Entity.UsuarioPrincipal;
 
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

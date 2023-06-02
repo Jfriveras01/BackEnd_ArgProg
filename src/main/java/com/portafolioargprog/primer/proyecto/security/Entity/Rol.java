@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.portafolioargprog.primer.proyecto.security.entity;
+package com.portafolioargprog.primer.proyecto.security.Entity;
 
-import com.portafolioargprog.primer.proyecto.security.enums.RolNombre;
+import com.portafolioargprog.primer.proyecto.security.Enums.RolNombre;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

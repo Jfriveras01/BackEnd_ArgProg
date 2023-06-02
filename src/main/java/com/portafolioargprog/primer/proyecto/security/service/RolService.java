@@ -4,9 +4,9 @@
  */
 package com.portafolioargprog.primer.proyecto.security.service;
 
-import com.portafolioargprog.primer.proyecto.security.enums.RolNombre;
+import com.portafolioargprog.primer.proyecto.security.Enums.RolNombre;
 import com.portafolioargprog.primer.proyecto.security.repository.IRolRepository;
-import com.portafolioargprog.primer.proyecto.security.entity.Rol;
+import com.portafolioargprog.primer.proyecto.security.Entity.Rol;
 import jakarta.transaction.Transactional;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;

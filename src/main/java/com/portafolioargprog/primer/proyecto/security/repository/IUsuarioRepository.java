@@ -4,7 +4,7 @@
  */
 package com.portafolioargprog.primer.proyecto.security.repository;
 
-import com.portafolioargprog.primer.proyecto.security.entity.Usuario;
+import com.portafolioargprog.primer.proyecto.security.Entity.Usuario;
 
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;

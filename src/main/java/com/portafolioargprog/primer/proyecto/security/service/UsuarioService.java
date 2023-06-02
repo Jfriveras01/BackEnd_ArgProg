@@ -4,7 +4,7 @@
  */
 package com.portafolioargprog.primer.proyecto.security.service;
 
-import com.portafolioargprog.primer.proyecto.security.entity.Usuario;
+import com.portafolioargprog.primer.proyecto.security.Entity.Usuario;
 import com.portafolioargprog.primer.proyecto.security.repository.IUsuarioRepository;
 
 import jakarta.transaction.Transactional;
