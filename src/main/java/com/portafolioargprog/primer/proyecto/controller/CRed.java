@@ -35,7 +35,7 @@ public class CRed {
     SRed sRed;
     
     @GetMapping("/lista")
-   public ResponseEntity<List<Red>> list(){
+    public ResponseEntity<List<Red>> list(){
         List<Red> list = sRed.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }

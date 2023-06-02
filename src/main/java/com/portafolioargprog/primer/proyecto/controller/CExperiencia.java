@@ -28,46 +28,37 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Fran
  */
 @RestController
-@RequestMapping("exp")
+@RequestMapping("exps")
 @CrossOrigin(origins = "https://front-end-argprograma.web.app")
 public class CExperiencia {
     
     @Autowired
-    SExperiencia sexperiencia;
+    SExperiencia sExperiencia;
     
     
     @GetMapping("/lista")
     public ResponseEntity<List<Experiencia>> list(){
-       List<Experiencia> list = sexperiencia.list();
-       return new ResponseEntity(list, HttpStatus.OK);
+        List<Experiencia> list = sExperiencia.list();
+        return new ResponseEntity(list, HttpStatus.OK);
     }
     
-     @GetMapping("/detail/{id}")
+    @GetMapping("/detail/{id}")
     public ResponseEntity<Experiencia> getById(@PathVariable("id") int id){
-        if(!sexperiencia.existsById(id))
+        if(!sExperiencia.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
-        Experiencia experiencia = sexperiencia.getOne(id).get();
+        Experiencia experiencia = sExperiencia.getOne(id).get();
         return new ResponseEntity(experiencia, HttpStatus.OK);
-    }
-    
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> delete(@PathVariable("id") int id) {
-        if (!sexperiencia.existsById(id)) {
-            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
-        }
-        sexperiencia.delete(id);
-        return new ResponseEntity(new Mensaje("Experiencia eliminada"), HttpStatus.OK);
     }
     
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoExperiencia dtoexp){      
         if(StringUtils.isBlank(dtoexp.getTitulo()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        if(sexperiencia.existsByTitulo(dtoexp.getTitulo()))
+        if(sExperiencia.existsByTitulo(dtoexp.getTitulo()))
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         
         Experiencia experiencia = new Experiencia(dtoexp.getImg(), dtoexp.getTitulo(), dtoexp.getDescripcion());
-        sexperiencia.save(experiencia);
+        sExperiencia.save(experiencia);
         
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
     }
@@ -75,22 +66,31 @@ public class CExperiencia {
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoExperiencia dtoexp){
         //Validamos si existe el ID
-        if(!sexperiencia.existsById(id))
+        if(!sExperiencia.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
         //Compara nombre de experiencias
-        if(sexperiencia.existsByTitulo(dtoexp.getTitulo()) && sexperiencia.getByTitulo(dtoexp.getTitulo()).get().getId() != id)
+        if(sExperiencia.existsByTitulo(dtoexp.getTitulo()) && sExperiencia.getByTitulo(dtoexp.getTitulo()).get().getId() != id)
             return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
         //No puede estar vacio
         if(StringUtils.isBlank(dtoexp.getTitulo()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         
-        Experiencia experiencia = sexperiencia.getOne(id).get();
+        Experiencia experiencia = sExperiencia.getOne(id).get();
         experiencia.setImg(dtoexp.getImg());
         experiencia.setTitulo(dtoexp.getTitulo());
         experiencia.setDescripcion((dtoexp.getDescripcion()));
         
-        sexperiencia.save(experiencia);
+        sExperiencia.save(experiencia);
         return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
              
+    }
+    
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") int id) {
+        if (!sExperiencia.existsById(id)) {
+            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
+        }
+        sExperiencia.delete(id);
+        return new ResponseEntity(new Mensaje("experiencia eliminada"), HttpStatus.OK);
     }
 }
